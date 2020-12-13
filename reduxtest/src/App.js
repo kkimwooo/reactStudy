@@ -1,15 +1,20 @@
+import { useState } from "react";
 import LeftText from "./LeftText";
 import RightColor from "./RightColor";
 
 function App() {
+  const [color, setColor] = useState("");
+  const changeText = (changeText) => {
+    setColor(changeText);
+  };
   return (
     <div>
       <header align="center">
         <h1>A,B는 App.js의 하위 컴포넌트들임</h1>
       </header>
       <div style={{ display: "flex" }}>
-        <LeftText />
-        <RightColor />
+        <LeftText changeText={changeText} />
+        <RightColor backColor={color} />
       </div>
     </div>
   );
