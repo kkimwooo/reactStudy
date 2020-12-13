@@ -1,7 +1,8 @@
 import { useState } from "react";
 import LeftText from "./LeftText";
 import RightColor from "./RightColor";
-
+import LeftTextuseRedux from "./useRedux/LeftTextuseRedux";
+import RightColoruseRedux from "./useRedux/RightColoruseRedux";
 function App() {
   const [color, setColor] = useState("");
   const changeText = (changeText) => {
@@ -15,6 +16,10 @@ function App() {
       <div style={{ display: "flex" }}>
         <LeftText changeText={changeText} />
         <RightColor backColor={color} />
+      </div>
+      <div style={{ display: "flex" }}>
+        <LeftTextuseRedux />
+        <RightColoruseRedux />
       </div>
     </div>
   );
