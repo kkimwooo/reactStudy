@@ -1,6 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
+import useLeftTextuseRedux from './hooks/useLeftTextuseRedux';
 
 const RightColor = () => {
+
+  const {color} = useLeftTextuseRedux();
+
   return (
     <div
       align="center"
@@ -8,7 +12,7 @@ const RightColor = () => {
         ({ flex: 1 },
         { padding: "1rem" },
         { width: "50%" },
-        { backgroundColor: "" })
+        { backgroundColor: color })
       }
     >
       <h2>컴포넌트 B(Redux)</h2>

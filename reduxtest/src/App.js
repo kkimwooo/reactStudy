@@ -1,12 +1,13 @@
 import { useState } from "react";
-import LeftText from "./LeftText";
-import RightColor from "./RightColor";
+import LeftText from "./noRedux/LeftText";
+import RightColor from "./noRedux/RightColor";
 import LeftTextuseRedux from "./useRedux/LeftTextuseRedux";
 import RightColoruseRedux from "./useRedux/RightColoruseRedux";
+
 function App() {
-  const [color, setColor] = useState("");
+  const [colorNoRedux, setColorNoRedux] = useState("");
   const changeText = (changeText) => {
-    setColor(changeText);
+    setColorNoRedux(changeText);
   };
   return (
     <div>
@@ -15,7 +16,7 @@ function App() {
       </header>
       <div style={{ display: "flex" }}>
         <LeftText changeText={changeText} />
-        <RightColor backColor={color} />
+        <RightColor backColor={colorNoRedux} />
       </div>
       <div style={{ display: "flex" }}>
         <LeftTextuseRedux />
