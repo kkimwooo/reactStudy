@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { change } from '../modules/LeftTextuseRedux';
+import { change } from '../modules/InputColorUseRedux';
 import { useCallback } from 'react';
 
-export default function useLeftTextuseRedux() {
-  const color = useSelector((state) => state.LeftTextuseRedux.color);
+export default function useInputColorUseRedux() {
+  const color = useSelector((state) => state.InputColorUseRedux.color);
   const dispatch = useDispatch();
 
   const onChange = useCallback(

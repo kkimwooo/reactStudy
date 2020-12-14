@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const LeftText = ({ changeText }) => {
+const InputColor = ({ changeText }) => {
   const [color, setColor] = useState("");
 
   //async awiat 처리 안하면
@@ -32,4 +32,4 @@ const LeftText = ({ changeText }) => {
   );
 };
 
-export default LeftText;
+export default InputColor;

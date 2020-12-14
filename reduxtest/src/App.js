@@ -1,8 +1,8 @@
 import { useState } from "react";
-import LeftText from "./noRedux/LeftText";
-import RightColor from "./noRedux/RightColor";
-import LeftTextuseRedux from "./useRedux/LeftTextuseRedux";
-import RightColoruseRedux from "./useRedux/RightColoruseRedux";
+import InputColor from "./noRedux/InputColor";
+import OutputColor from "./noRedux/OutputColor";
+import InputColorUseRedux from "./useRedux/InputColorUseRedux";
+import OutputColorUseRedux from "./useRedux/OutputColorUseRedux";
 
 function App() {
   const [colorNoRedux, setColorNoRedux] = useState("");
@@ -15,12 +15,12 @@ function App() {
         <h1>A,B는 App.js의 하위 컴포넌트들임</h1>
       </header>
       <div style={{ display: "flex" }}>
-        <LeftText changeText={changeText} />
-        <RightColor backColor={colorNoRedux} />
+        <InputColor changeText={changeText} />
+        <OutputColor backColor={colorNoRedux} />
       </div>
       <div style={{ display: "flex" }}>
-        <LeftTextuseRedux />
-        <RightColoruseRedux />
+        <InputColorUseRedux />
+        <OutputColorUseRedux />
       </div>
     </div>
   );

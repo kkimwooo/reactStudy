@@ -1,10 +1,10 @@
 import React,{useState} from "react";
-import useLeftTextuseRedux from './hooks/useLeftTextuseRedux';
+import useInputColorUseRedux from './hooks/useInputColorUseRedux';
 
-const LeftTextuseRedux = () => {
+const InputColorUseRedux = () => {
 
   const [color,setColor] = useState('');
-  const {onChange} = useLeftTextuseRedux();
+  const {onChange} = useInputColorUseRedux();
   
   const onClickChange =()=>{
     onChange(color);
@@ -30,4 +30,4 @@ const LeftTextuseRedux = () => {
   );
 };
 
-export default LeftTextuseRedux;
+export default InputColorUseRedux;

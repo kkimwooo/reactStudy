@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import LeftTextuseRedux from './LeftTextuseRedux';
+import InputColorUseRedux from './InputColorUseRedux';
 
 const rootReducer = combineReducers({
-    LeftTextuseRedux
+    InputColorUseRedux
 });
 
 export default rootReducer;

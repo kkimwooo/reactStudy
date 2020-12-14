@@ -1,10 +1,10 @@
 import React from "react";
-import useLeftTextuseRedux from './hooks/useLeftTextuseRedux';
 
-const RightColor = () => {
-
-  const {color} = useLeftTextuseRedux();
-
+const OutputColor = ({ backColor }) => {
+  let color = "white";
+  if (backColor !== "") {
+    color = backColor;
+  }
   return (
     <div
       align="center"
@@ -15,10 +15,10 @@ const RightColor = () => {
         { backgroundColor: color })
       }
     >
-      <h2>컴포넌트 B(Redux)</h2>
+      <h2>컴포넌트 B</h2>
       A에서 입력한 값으로 배경 색이 바뀐다
     </div>
   );
 };
 
-export default RightColor;
+export default OutputColor;

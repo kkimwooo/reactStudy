@@ -1,4 +1,4 @@
-const CHANGE  = 'LeftTextuseRedux/CHANGE';
+const CHANGE  = 'InputColorUseRedux/CHANGE';
 
 export const change = (diff) => ({
     type: CHANGE,
@@ -9,7 +9,7 @@ const initialState = {
     color: ''
   };
 
-  function LeftTextuseRedux(state = initialState, action) {
+  function InputColorUseRedux(state = initialState, action) {
     switch (action.type) {
       case CHANGE:
         return { color: action.payload };
@@ -18,4 +18,4 @@ const initialState = {
     }
   }
   
-  export default LeftTextuseRedux;
+  export default InputColorUseRedux;

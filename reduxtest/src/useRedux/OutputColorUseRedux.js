@@ -1,10 +1,10 @@
 import React from "react";
+import useInputColorUseRedux from './hooks/useInputColorUseRedux';
 
-const RightColor = ({ backColor }) => {
-  let color = "white";
-  if (backColor !== "") {
-    color = backColor;
-  }
+const RightColor = () => {
+
+  const {color} = useInputColorUseRedux();
+
   return (
     <div
       align="center"
@@ -15,7 +15,7 @@ const RightColor = ({ backColor }) => {
         { backgroundColor: color })
       }
     >
-      <h2>컴포넌트 B</h2>
+      <h2>컴포넌트 B(Redux)</h2>
       A에서 입력한 값으로 배경 색이 바뀐다
     </div>
   );
